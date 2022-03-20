@@ -1,0 +1,11 @@
+<!ELEMENT web-app (servlet+,servlet-mapping,servlet-naBookingme)>
+<!ELEMENT servlet (servlet-name?,servlet-class?,display-name?,description?)>
+<!ELEMENT servlet-name (#PCDATA)>
+<!ELEMENT servlet-class (#PCDATA)>
+<!ELEMENT servlet-mapping (servlet-name?,url-pattern?)>
+<!ELEMENT url-pattern (#PCDATA)>
+<!ELEMENT display-name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT servlet-naBookingme (#PCDATA|servlet-servlet-naBookingme)*>
+<!ELEMENT servlet-servlet-naBookingme (#PCDATA|servlet-name|servlet-class|url-p)*>
+<!ELEMENT url-p (#PCDATA|servlet|url-pattern|servlet-mapping)*>
